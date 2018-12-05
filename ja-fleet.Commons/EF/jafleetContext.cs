@@ -25,6 +25,7 @@ namespace jafleet.EF
         public virtual DbSet<Maker> Maker { get; set; }
         public virtual DbSet<Type> Type { get; set; }
         public virtual DbSet<Log> Log { get; set; }
+        public virtual DbSet<LineUser> LineUser { get; set; }
 
         public static readonly LoggerFactory MyLoggerFactory
             = new LoggerFactory(new[]
@@ -227,6 +228,22 @@ namespace jafleet.EF
                 entity.Property(e => e.UserId).HasColumnName("USER_ID");
             });
 
+            modelBuilder.Entity<LineUser>(entity =>
+            {
+                entity.HasKey(e => e.UserId);
+
+                entity.ToTable("LINE_USER");
+
+                entity.Property(e => e.UserId)
+                .HasColumnName("USER_ID")
+                .ValueGeneratedNever();
+
+                entity.Property(e => e.UserName).HasColumnName("USER_NAME");
+
+                entity.Property(e => e.ProfileImage).HasColumnName("PROFILE_IMAGE");
+
+                entity.Property(e => e.LastAccess).HasColumnName("LAST_ACCESS");
+            });
         }
     }
 }
