@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Configuration;
+using System.IO;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Console;
 
@@ -40,7 +43,9 @@ namespace jafleet.EF
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseLoggerFactory(MyLoggerFactory).UseSqlite("Data Source='../ja-fleet_db/ja-fleet.sqlite3'");
+                var config = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json").Build();
+                var dbpath = config.GetConnectionString("path");
+                optionsBuilder.UseLoggerFactory(MyLoggerFactory).UseSqlite($@"Data Source='{dbpath}'");
             }
         }
 
