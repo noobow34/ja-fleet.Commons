@@ -10,5 +10,7 @@ namespace jafleet.EF
         public string UserName { get; set; }
         public byte[] ProfileImage { get; set; }
         public string LastAccess { get; set; }
+        public string FollowDate { get; set; }
+        public string UnfollowDate { get; set; }
     }
 }

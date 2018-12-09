@@ -248,6 +248,10 @@ namespace jafleet.EF
                 entity.Property(e => e.ProfileImage).HasColumnName("PROFILE_IMAGE");
 
                 entity.Property(e => e.LastAccess).HasColumnName("LAST_ACCESS");
+
+                entity.Property(e => e.FollowDate).HasColumnName("FOLLOW_DATE");
+
+                entity.Property(e => e.UnfollowDate).HasColumnName("UNFOLLOW_DATE");
             });
         }
     }

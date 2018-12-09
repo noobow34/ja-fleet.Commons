@@ -11,6 +11,8 @@ namespace jafleet.Constants
         public const string PHOTO = "2";
         public const string LINE = "3";
         public const string EXCEPTION = "4";
+        public const string LINE_FOLLOW = "5";
+        public const string LINE_UNFOLLOW = "6";
 
         public static string GetLogTypeName(string logtype)
         {
@@ -24,6 +26,10 @@ namespace jafleet.Constants
                     return "LINE";
                 case EXCEPTION:
                     return "例外";
+                case LINE_FOLLOW:
+                    return "LINEフォロー";
+                case LINE_UNFOLLOW:
+                    return "LINEアンフォロー";
                 default:
                     return logtype;
             }
