@@ -21,9 +21,9 @@ namespace jafleet.EF
         public string OperationCode { get; set; }
         public string Operation { get; set; }
         public string Remarks { get; set; }
-        public string CreationTime { get; set; }
-        public string UpdateTime { get; set; }
+        public DateTime CreationTime { get; set; }
+        public DateTime UpdateTime { get; set; }
         public string LinkUrl { get; set; }
-        public string ActualUpdateTime { get; set; }
+        public DateTime ActualUpdateTime { get; set; }
     }
 }

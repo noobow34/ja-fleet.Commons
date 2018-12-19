@@ -9,8 +9,8 @@ namespace jafleet.EF
         public string UserId { get; set; }
         public string UserName { get; set; }
         public byte[] ProfileImage { get; set; }
-        public string LastAccess { get; set; }
-        public string FollowDate { get; set; }
-        public string UnfollowDate { get; set; }
+        public DateTime LastAccess { get; set; }
+        public DateTime FollowDate { get; set; }
+        public DateTime UnfollowDate { get; set; }
     }
 }
