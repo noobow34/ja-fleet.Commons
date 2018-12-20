@@ -44,7 +44,7 @@ namespace jafleet.EF
             if (!optionsBuilder.IsConfigured)
             {
                 var config = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json").Build();
-                var connectionString = config.GetConnectionString("ConnectionString");
+                var connectionString = config.GetConnectionString("DefaultConnection");
                 optionsBuilder.UseLoggerFactory(MyLoggerFactory).UseMySQL(connectionString);
             }
         }

@@ -22,12 +22,12 @@ namespace jafleet.EF
         [Display(Name = "製造番号")]
         public string SerialNumber { get; set; }
         [Display(Name = "更新日時")]
-        public DateTime UpdateTime { get; set; }
+        public DateTime? UpdateTime { get; set; }
         [Display(Name = "作成日時")]
-        public DateTime CreationTime { get; set; }
+        public DateTime? CreationTime { get; set; }
         [Display(Name = "リンクURL")]
         public string LinkUrl { get; set; }
         [Display(Name = "実更新日時")]
-        public DateTime ActualUpdateTime { get; set; }
+        public DateTime? ActualUpdateTime { get; set; }
     }
 }
