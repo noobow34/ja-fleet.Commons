@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Configuration;
 using System.IO;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Console;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 namespace jafleet.EF
 {
@@ -45,7 +44,12 @@ namespace jafleet.EF
             {
                 var config = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json").Build();
                 var connectionString = config.GetConnectionString("DefaultConnection");
-                optionsBuilder.UseLoggerFactory(MyLoggerFactory).UseMySQL(connectionString);
+                optionsBuilder.UseLoggerFactory(MyLoggerFactory).UseMySql(connectionString,
+                    mySqlOptions =>
+                    {
+                        mySqlOptions.ServerVersion(new Version(10,3), ServerType.MariaDb);
+                    }
+                );
             }
         }
 
