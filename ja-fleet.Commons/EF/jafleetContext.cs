@@ -26,6 +26,7 @@ namespace jafleet.EF
         public virtual DbSet<Code> Code { get; set; }
         public virtual DbSet<Maker> Maker { get; set; }
         public virtual DbSet<Type> Type { get; set; }
+        public virtual DbSet<TypeDetail> TypeDetail { get; set; }
         public virtual DbSet<Log> Log { get; set; }
         public virtual DbSet<LineUser> LineUser { get; set; }
 
@@ -78,6 +79,8 @@ namespace jafleet.EF
                 entity.Property(e => e.SerialNumber).HasColumnName("SERIAL_NUMBER");
 
                 entity.Property(e => e.TypeCode).HasColumnName("TYPE_CODE");
+
+                entity.Property(e => e.TypeDetailCode).HasColumnName("TYPE_DETAIL_CODE");
 
                 entity.Property(e => e.UpdateTime).HasColumnName("UPDATE_TIME");
 
@@ -216,6 +219,19 @@ namespace jafleet.EF
                 entity.Property(e => e.MakerCode).HasColumnName("MAKER_CODE");
 
                 entity.Property(e => e.TypeName).HasColumnName("TYPE_NAME");
+            });
+
+            modelBuilder.Entity<TypeDetail>(entity =>
+            {
+                entity.HasKey(e => new { e.TypeCode, e.TypeDetailCode });
+
+                entity.ToTable("TYPE_DETAIL");
+
+                entity.Property(e => e.TypeCode).HasColumnName("TYPE_CODE");
+
+                entity.Property(e => e.TypeDetailCode).HasColumnName("TYPE_DETAIL_CODE");
+
+                entity.Property(e => e.TypeDetailName).HasColumnName("TYPE_DETAIL_NAME");
             });
 
             modelBuilder.Entity<Log>(entity =>

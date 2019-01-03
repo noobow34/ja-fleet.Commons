@@ -11,6 +11,8 @@ namespace jafleet.EF
         public string RegistrationNumber { get; set; }
         [Display(Name = "型式")]
         public string TypeCode { get; set; }
+        [Display(Name = "詳細型式")]
+        public string TypeDetailCode { get; set; }
         [Display(Name = "登録年月日")]
         public string RegisterDate { get; set; }
         [Display(Name = "運用状況")]
