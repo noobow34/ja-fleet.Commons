@@ -13,6 +13,7 @@ namespace jafleet.Constants
         public const string EXCEPTION = "4";
         public const string LINE_FOLLOW = "5";
         public const string LINE_UNFOLLOW = "6";
+        public const string LINE_LINK = "7";
 
         public static string GetLogTypeName(string logtype)
         {
@@ -30,6 +31,8 @@ namespace jafleet.Constants
                     return "LINEフォロー";
                 case LINE_UNFOLLOW:
                     return "LINEアンフォロー";
+                case LINE_LINK:
+                    return "LINEリンク";
                 default:
                     return logtype;
             }
