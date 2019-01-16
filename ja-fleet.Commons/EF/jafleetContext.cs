@@ -29,6 +29,7 @@ namespace jafleet.EF
         public virtual DbSet<TypeDetail> TypeDetail { get; set; }
         public virtual DbSet<Log> Log { get; set; }
         public virtual DbSet<LineUser> LineUser { get; set; }
+        public virtual DbSet<SearchCondition> SearchCondition { get; set; }
 
         public static readonly LoggerFactory MyLoggerFactory
             = new LoggerFactory(new[]
@@ -272,6 +273,25 @@ namespace jafleet.EF
                 entity.Property(e => e.FollowDate).HasColumnName("FOLLOW_DATE");
 
                 entity.Property(e => e.UnfollowDate).HasColumnName("UNFOLLOW_DATE");
+            });
+
+            modelBuilder.Entity<SearchCondition>(entity =>
+            {
+                entity.HasKey(e => e.SearchConditionKey);
+
+                entity.ToTable("SEARCH_CONDITION");
+
+                entity.Property(e => e.SearchConditionKey)
+                .HasColumnName("SEARCH_CONDITION_KEY")
+                .ValueGeneratedNever();
+
+                entity.Property(e => e.SearchConditionJson).HasColumnName("SEARCH_CONDITOIN");
+
+                entity.Property(e => e.SearchCount).HasColumnName("SEARCH_COUNT");
+
+                entity.Property(e => e.FirstSearchDate).HasColumnName("FIRST_SEARCH_DATE");
+
+                entity.Property(e => e.LastSearchDate).HasColumnName("LAST_SEARCH_DATE");
             });
         }
     }
