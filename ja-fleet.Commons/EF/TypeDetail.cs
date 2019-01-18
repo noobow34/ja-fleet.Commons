@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace jafleet.EF
+namespace jafleet.Commons.EF
 {
     public partial class TypeDetail
     {

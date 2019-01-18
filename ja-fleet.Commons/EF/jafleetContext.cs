@@ -6,7 +6,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Console;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
-namespace jafleet.EF
+namespace jafleet.Commons.EF
 {
     public partial class jafleetContext : DbContext
     {

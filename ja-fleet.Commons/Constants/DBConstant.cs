@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace jafleet.Constants
+namespace jafleet.Commons.Constants
 {
     public class DBConstant
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace jafleet.EF
+namespace jafleet.Commons.EF
 {
     public class Log
     {

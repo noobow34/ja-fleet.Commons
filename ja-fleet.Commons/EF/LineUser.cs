@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace jafleet.EF
+namespace jafleet.Commons.EF
 {
     public class LineUser
     {

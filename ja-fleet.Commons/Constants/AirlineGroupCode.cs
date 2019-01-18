@@ -1,4 +1,4 @@
-namespace jafleet.Constants
+namespace jafleet.Commons.Constants
 {
     public static class AirlineGroupCode{
         public const string ANAGroup = "A";
