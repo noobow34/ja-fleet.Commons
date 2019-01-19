@@ -30,6 +30,7 @@ namespace jafleet.Commons.EF
         public virtual DbSet<Log> Log { get; set; }
         public virtual DbSet<LineUser> LineUser { get; set; }
         public virtual DbSet<SearchCondition> SearchCondition { get; set; }
+        public virtual DbSet<DailyStatistics> DailyStatistics { get; set; }
 
         public static readonly LoggerFactory MyLoggerFactory
             = new LoggerFactory(new[]
@@ -296,6 +297,26 @@ namespace jafleet.Commons.EF
                 entity.Property(e => e.FirstSearchDate).HasColumnName("FIRST_SEARCH_DATE");
 
                 entity.Property(e => e.LastSearchDate).HasColumnName("LAST_SEARCH_DATE");
+            });
+
+            modelBuilder.Entity<DailyStatistics>(entity =>
+            {
+                entity.HasKey(e => e.LogDateYyyyMmDd);
+
+                entity.ToTable("DAILY_STATISTICS");
+
+                entity.Property(e => e.LogDateYyyyMmDd)
+                .HasColumnName("LOG_DATE_YYYYMMDD")
+                .ValueGeneratedNever();
+
+                entity.Property(e => e.SearchCount).HasColumnName("SEARCH_COUNT");
+
+                entity.Property(e => e.LineCount).HasColumnName("LINE_COUNT");
+
+                entity.Property(e => e.PhotoCount).HasColumnName("PHOTO_COUNT");
+
+                entity.Property(e => e.ExCount).HasColumnName("EX_COUNT");
+
             });
         }
     }
