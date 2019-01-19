@@ -12,5 +12,7 @@ namespace jafleet.Commons.EF
         public string LogType { get; set; }
         public string LogDetail { get; set; }
         public string UserId { get; set; }
+        public string LogDateYyyyMmDd { get; set; }
+        public string IsAdmin { get; set; }
     }
 }

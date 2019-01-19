@@ -252,6 +252,10 @@ namespace jafleet.Commons.EF
                 entity.Property(e => e.LogDetail).HasColumnName("LOG_DETAIL");
 
                 entity.Property(e => e.UserId).HasColumnName("USER_ID");
+
+                entity.Property(e => e.LogDateYyyyMmDd).HasColumnName("LOG_DATE_YYYYMMDD");
+
+                entity.Property(e => e.IsAdmin).HasColumnName("IS_ADMIN");
             });
 
             modelBuilder.Entity<LineUser>(entity =>
