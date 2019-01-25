@@ -32,6 +32,7 @@ namespace jafleet.Commons.EF
         public virtual DbSet<LineUser> LineUser { get; set; }
         public virtual DbSet<SearchCondition> SearchCondition { get; set; }
         public virtual DbSet<DailyStatistics> DailyStatistics { get; set; }
+        public virtual DbSet<AdminUser> AdminUser { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -317,6 +318,17 @@ namespace jafleet.Commons.EF
 
                 entity.Property(e => e.ExCount).HasColumnName("EX_COUNT");
 
+            });
+
+            modelBuilder.Entity<AdminUser>(entity =>
+            {
+                entity.HasKey(e => e.UserId);
+
+                entity.ToTable("ADMIN_USER");
+
+                entity.Property(e => e.UserId)
+                .HasColumnName("USER_ID")
+                .ValueGeneratedNever();
             });
         }
     }
