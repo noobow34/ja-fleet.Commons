@@ -4,22 +4,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Console;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 namespace jafleet.Commons.EF
 {
     public partial class jafleetContext : DbContext
     {
-        public jafleetContext()
-        {
-        }
-
-        public jafleetContext(DbContextOptions<jafleetContext> options)
-            : base(options)
-        {
-        }
-
         public virtual DbSet<Aircraft> Aircraft { get; set; }
         public virtual DbSet<AircraftView> AircraftView { get; set; }
         public virtual DbSet<Airline> Airline { get; set; }
@@ -143,42 +133,6 @@ namespace jafleet.Commons.EF
                 entity.Property(e => e.ActualUpdateTime).HasColumnName("ACTUAL_UPDATE_TIME");
             });
 
-            modelBuilder.Entity<Airline>(entity =>
-            {
-                entity.HasKey(e => e.AirlineCode);
-
-                entity.ToTable("AIRLINE");
-
-                entity.Property(e => e.AirlineCode)
-                    .HasColumnName("AIRLINE_CODE")
-                    .ValueGeneratedNever();
-
-                entity.Property(e => e.AirlineGroupCode).HasColumnName("AIRLINE_GROUP_CODE");
-
-                entity.Property(e => e.AirlineNameEn).HasColumnName("AIRLINE_NAME_EN");
-
-                entity.Property(e => e.AirlineNameEnShort).HasColumnName("AIRLINE_NAME_EN_SHORT");
-
-                entity.Property(e => e.AirlineNameJp).HasColumnName("AIRLINE_NAME_JP");
-
-                entity.Property(e => e.AirlineNameJpShort).HasColumnName("AIRLINE_NAME_JP_SHORT");
-
-                entity.Property(e => e.DisplayOrder).HasColumnName("DISPLAY_ORDER");
-            });
-
-            modelBuilder.Entity<AirlineGroup>(entity =>
-            {
-                entity.HasKey(e => e.AirlineGroupCode);
-
-                entity.ToTable("AIRLINE_GROUP");
-
-                entity.Property(e => e.AirlineGroupCode)
-                    .HasColumnName("AIRLINE_GROUP_CODE")
-                    .ValueGeneratedNever();
-
-                entity.Property(e => e.AirlineGroupName).HasColumnName("AIRLINE_GROUP_NAME");
-            });
-
             modelBuilder.Entity<Code>(entity =>
             {
                 entity.HasKey(e => new { e.CodeType, e.Key });
@@ -190,38 +144,6 @@ namespace jafleet.Commons.EF
                 entity.Property(e => e.Key).HasColumnName("KEY");
 
                 entity.Property(e => e.Value).HasColumnName("VALUE");
-            });
-
-            modelBuilder.Entity<Maker>(entity =>
-            {
-                entity.HasKey(e => e.MakerCode);
-
-                entity.ToTable("MAKER");
-
-                entity.Property(e => e.MakerCode)
-                    .HasColumnName("MAKER_CODE")
-                    .ValueGeneratedNever();
-
-                entity.Property(e => e.MakerNameEn).HasColumnName("MAKER_NAME_EN");
-
-                entity.Property(e => e.MakerNameJp).HasColumnName("MAKER_NAME_JP");
-            });
-
-            modelBuilder.Entity<Type>(entity =>
-            {
-                entity.HasKey(e => e.TypeCode);
-
-                entity.ToTable("TYPE");
-
-                entity.Property(e => e.TypeCode)
-                    .HasColumnName("TYPE_CODE")
-                    .ValueGeneratedNever();
-
-                entity.Property(e => e.DisplayOrder).HasColumnName("DISPLAY_ORDER");
-
-                entity.Property(e => e.MakerCode).HasColumnName("MAKER_CODE");
-
-                entity.Property(e => e.TypeName).HasColumnName("TYPE_NAME");
             });
 
             modelBuilder.Entity<TypeDetail>(entity =>
@@ -237,99 +159,6 @@ namespace jafleet.Commons.EF
                 entity.Property(e => e.TypeDetailName).HasColumnName("TYPE_DETAIL_NAME");
             });
 
-            modelBuilder.Entity<Log>(entity =>
-            {
-                entity.HasKey(e => e.LogId);
-
-                entity.ToTable("log");
-
-                entity.Property(e => e.LogId)
-                .HasColumnName("LOG_ID")
-                .ValueGeneratedOnAdd();
-
-                entity.Property(e => e.LogDate).HasColumnName("LOG_DATE");
-
-                entity.Property(e => e.LogType).HasColumnName("LOG_TYPE");
-
-                entity.Property(e => e.LogDetail).HasColumnName("LOG_DETAIL");
-
-                entity.Property(e => e.UserId).HasColumnName("USER_ID");
-
-                entity.Property(e => e.LogDateYyyyMmDd).HasColumnName("LOG_DATE_YYYYMMDD");
-
-                entity.Property(e => e.IsAdmin).HasColumnName("IS_ADMIN");
-            });
-
-            modelBuilder.Entity<LineUser>(entity =>
-            {
-                entity.HasKey(e => e.UserId);
-
-                entity.ToTable("LINE_USER");
-
-                entity.Property(e => e.UserId)
-                .HasColumnName("USER_ID")
-                .ValueGeneratedNever();
-
-                entity.Property(e => e.UserName).HasColumnName("USER_NAME");
-
-                entity.Property(e => e.ProfileImage).HasColumnName("PROFILE_IMAGE");
-
-                entity.Property(e => e.LastAccess).HasColumnName("LAST_ACCESS");
-
-                entity.Property(e => e.FollowDate).HasColumnName("FOLLOW_DATE");
-
-                entity.Property(e => e.UnfollowDate).HasColumnName("UNFOLLOW_DATE");
-            });
-
-            modelBuilder.Entity<SearchCondition>(entity =>
-            {
-                entity.HasKey(e => e.SearchConditionKey);
-
-                entity.ToTable("SEARCH_CONDITION");
-
-                entity.Property(e => e.SearchConditionKey)
-                .HasColumnName("SEARCH_CONDITION_KEY")
-                .ValueGeneratedNever();
-
-                entity.Property(e => e.SearchConditionJson).HasColumnName("SEARCH_CONDITOIN");
-
-                entity.Property(e => e.SearchCount).HasColumnName("SEARCH_COUNT");
-
-                entity.Property(e => e.FirstSearchDate).HasColumnName("FIRST_SEARCH_DATE");
-
-                entity.Property(e => e.LastSearchDate).HasColumnName("LAST_SEARCH_DATE");
-            });
-
-            modelBuilder.Entity<DailyStatistics>(entity =>
-            {
-                entity.HasKey(e => e.LogDateYyyyMmDd);
-
-                entity.ToTable("DAILY_STATISTICS");
-
-                entity.Property(e => e.LogDateYyyyMmDd)
-                .HasColumnName("LOG_DATE_YYYYMMDD")
-                .ValueGeneratedNever();
-
-                entity.Property(e => e.SearchCount).HasColumnName("SEARCH_COUNT");
-
-                entity.Property(e => e.LineCount).HasColumnName("LINE_COUNT");
-
-                entity.Property(e => e.PhotoCount).HasColumnName("PHOTO_COUNT");
-
-                entity.Property(e => e.ExCount).HasColumnName("EX_COUNT");
-
-            });
-
-            modelBuilder.Entity<AdminUser>(entity =>
-            {
-                entity.HasKey(e => e.UserId);
-
-                entity.ToTable("ADMIN_USER");
-
-                entity.Property(e => e.UserId)
-                .HasColumnName("USER_ID")
-                .ValueGeneratedNever();
-            });
         }
     }
 }
