@@ -14,12 +14,6 @@ namespace jafleet.Commons.EF
         [Key]
         [Column("REGISTRATION_NUMBER")]
         public string RegistrationNumber { get; set; }
-        [Display(Name = "型式")]
-        [Column("TYPE_CODE")] //最終的に削除
-        public string TypeCode { get; set; }
-        [Display(Name = "詳細型式")]
-        [Column("TYPE_DETAIL_CODE")] //最終的に削除
-        public string TypeDetailCode { get; set; }
         [Display(Name = "登録年月日")]
         [Column("REGISTER_DATE")]
         public string RegisterDate { get; set; }
@@ -47,5 +41,9 @@ namespace jafleet.Commons.EF
         [Display(Name = "実更新日時")]
         [Column("ACTUAL_UPDATE_TIME")]
         public DateTime? ActualUpdateTime { get; set; }
+        [Display(Name = "詳細型式")]
+        [Column("TYPE_DETAIL_ID")]
+        public int TypeDetailId { get; set; }
+
     }
 }

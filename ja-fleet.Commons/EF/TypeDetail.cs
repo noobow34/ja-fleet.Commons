@@ -13,7 +13,7 @@ namespace jafleet.Commons.EF
         public string TypeCode { get; set; }
         [Column("TYPE_DETAIL_CODE")]
         public string TypeDetailCode { get; set; }
-        [Column("TYPE_DETTAIL_NAME")]
+        [Column("TYPE_DETAIL_NAME")]
         public string TypeDetailName { get; set; }
     }
 }

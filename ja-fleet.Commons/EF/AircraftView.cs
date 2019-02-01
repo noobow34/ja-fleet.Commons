@@ -48,5 +48,7 @@ namespace jafleet.Commons.EF
         public string LinkUrl { get; set; }
         [Column("ACTUAL_UPDATE_TIME")]
         public DateTime? ActualUpdateTime { get; set; }
+        [Column("TYPE_DETAIL_ID")]
+        public int TypeDetailId { get; set; }
     }
 }
