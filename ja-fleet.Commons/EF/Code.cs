@@ -7,6 +7,7 @@ namespace jafleet.Commons.EF
     public partial class Code
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("CODE_ID")]
         public int? CodeId { get; set; }
         [Column("CODE_TYPE")]

@@ -7,6 +7,7 @@ namespace jafleet.Commons.EF
     public partial class TypeDetail
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("TYPE_DETAIL_ID")]
         public int? TypeDetailId { get; set; }
         [Column("TYPE_CODE")]
