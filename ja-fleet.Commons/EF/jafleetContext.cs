@@ -23,6 +23,7 @@ namespace jafleet.Commons.EF
         public virtual DbSet<SearchCondition> SearchCondition { get; set; }
         public virtual DbSet<DailyStatistics> DailyStatistics { get; set; }
         public virtual DbSet<AdminUser> AdminUser { get; set; }
+        public virtual DbSet<TypeDetailView> TypeDetailView { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
