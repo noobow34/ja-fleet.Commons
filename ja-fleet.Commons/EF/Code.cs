@@ -16,5 +16,8 @@ namespace jafleet.Commons.EF
         public string Key { get; set; }
         [Column("VALUE")]
         public string Value { get; set; }
+
+        [NotMapped]
+        public string OptGroup { get; set; }
     }
 }
