@@ -11,7 +11,7 @@ namespace jafleet.Commons.EF
     {
         [Key]
         [Column("TYPE_DETAIL_ID")]
-        public int? TypeDetailId { get; set; }
+        public int TypeDetailId { get; set; }
         [Column("TYPE_CODE")]
         public string TypeCode { get; set; }
         [Column("TYPE_NAME")]
