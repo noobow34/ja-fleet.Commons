@@ -1,10 +1,4 @@
-﻿using System;
-using System.IO;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace jafleet.Commons.EF
 {
@@ -25,27 +19,7 @@ namespace jafleet.Commons.EF
         public virtual DbSet<AdminUser> AdminUser { get; set; }
         public virtual DbSet<TypeDetailView> TypeDetailView { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                var config = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json").Build();
-                var connectionString = config.GetConnectionString("DefaultConnection");
+        public jafleetContext(DbContextOptions<jafleetContext> options) : base(options) { }
 
-                IServiceCollection serviceCollection = new ServiceCollection();
-                serviceCollection.AddLogging(builder => builder
-                .AddConsole()
-                .AddFilter(level => level >= LogLevel.Information)
-                );
-                var loggerFactory = serviceCollection.BuildServiceProvider().GetService<ILoggerFactory>();
-
-                optionsBuilder.UseLoggerFactory(loggerFactory).UseMySql(connectionString,
-                    mySqlOptions =>
-                    {
-                        mySqlOptions.ServerVersion(new Version(10,3), ServerType.MariaDb);
-                    }
-                );
-            }
-        }
     }
 }
