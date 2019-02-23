@@ -19,6 +19,7 @@ namespace jafleet.Commons.EF
         public virtual DbSet<AdminUser> AdminUser { get; set; }
         public virtual DbSet<TypeDetailView> TypeDetailView { get; set; }
         public virtual DbSet<Message> Messages { get; set; }
+        public virtual DbSet<LineUserProfileImage> LineUserProfileImage { get; set; }
 
         public jafleetContext(DbContextOptions<jafleetContext> options) : base(options) { }
 
