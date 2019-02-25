@@ -18,5 +18,7 @@ namespace jafleet.Commons.EF
         public DateTime? FollowDate { get; set; }
         [Column("UNFOLLOW_DATE")]
         public DateTime? UnfollowDate { get; set; }
+        [Column("PROFILE_UPDATE_TIME")]
+        public DateTime? ProfileUpdateTime { get; set; }
     }
 }
