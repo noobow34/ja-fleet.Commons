@@ -8,7 +8,7 @@ namespace jafleet.Commons.Constants
     public static class LogType
 {
         public const string SEARCH = "1";
-        public const string PHOTO = "2";
+        public const string DETAIL = "2";
         public const string LINE = "3";
         public const string EXCEPTION = "4";
         public const string LINE_FOLLOW = "5";
@@ -21,8 +21,8 @@ namespace jafleet.Commons.Constants
             {
                 case SEARCH:
                     return "検索";
-                case PHOTO:
-                    return "PHOTO";
+                case DETAIL:
+                    return "DETAIL";
                 case LINE:
                     return "LINE";
                 case EXCEPTION:
