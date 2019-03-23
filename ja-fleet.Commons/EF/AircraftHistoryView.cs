@@ -4,9 +4,16 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace jafleet.Commons.EF
 {
-    [Table("AIRCRAFT_VIEW")]
-    public partial class AircraftView
+    [Table("AIRCRAFT_HISTORY_VIEW")]
+    public partial class AircraftHistoryView
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Column("AH_ID")]
+        public int? AhId { get; set; }
+        [Column("SEQ")]
+        public int? Seq { get; set; }
+
         [Column("DISPLAY_ORDER")]
         public string DisplayOrder { get; set; }
         [Column("AIRLINE_GROUP_CODE")]
@@ -23,7 +30,6 @@ namespace jafleet.Commons.EF
         public string TypeDetailCode { get; set; }
         [Column("TYPE_DETAIL_NAME")]
         public string TypeDetailName { get; set; }
-        [Key]
         [Column("REGISTRATION_NUMBER")]
         public string RegistrationNumber { get; set; }
         [Column("SERIAL_NUMBER")]
