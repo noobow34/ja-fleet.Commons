@@ -1,5 +1,4 @@
-﻿using System;
-namespace jafleet.Commons.Constants
+﻿namespace jafleet.Commons.Constants
 {
     public static class CodeType
     {

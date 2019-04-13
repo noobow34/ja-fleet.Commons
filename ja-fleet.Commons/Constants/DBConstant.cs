@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace jafleet.Commons.Constants
+﻿namespace jafleet.Commons.Constants
 {
     public class DBConstant
     {

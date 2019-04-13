@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace jafleet.Commons.EF
 {
@@ -26,5 +23,7 @@ namespace jafleet.Commons.EF
         public string LogDateYyyyMmDd { get; set; }
         [Column("IS_ADMIN")]
         public string IsAdmin { get; set; }
+        [Column("ADDITIONAL")]
+        public string Additional { get; set; }
     }
 }
