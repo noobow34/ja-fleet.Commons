@@ -48,6 +48,11 @@
         public const string RETIRE_UNREGISTERED = "8";
 
         /// <summary>
+        /// その他
+        /// </summary>
+        public const string OTHER = "9";
+
+        /// <summary>
         /// 運用前
         /// </summary>
         public static readonly string[] PRE_OPERATION = new string[] { RESERVED, MAKING, DELIVERY };
@@ -62,6 +67,9 @@
         /// </summary>
         public static readonly string[] RETIRE = new string[] { RETIRE_REGISTERED, RETIRE_UNREGISTERED };
 
-
+        /// <summary>
+        /// その他
+        /// </summary>
+        public static readonly string[] OTHERS = new string[] { OTHER };
     }
 }
