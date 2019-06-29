@@ -53,6 +53,9 @@ namespace jafleet.Commons.EF
         [Column("WIFI")]
         public string Wifi { get; set; }
 
+        [Column("WIFI_SHORT")]
+        public string WifiShort { get; set; }
+
         [Column("OPERATION_CODE")]
         public string OperationCode { get; set; }
         [NotMapped]
