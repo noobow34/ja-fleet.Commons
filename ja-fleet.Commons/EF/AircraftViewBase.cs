@@ -82,6 +82,7 @@ namespace jafleet.Commons.EF
 
         [Column("SPECIAL_LIVERY")]
         public string SpecialLivery { get; set; }
+        [NotMapped]
         public int SpecialLiveryChanged { get; set; } = 0;
 
 
