@@ -82,6 +82,7 @@ namespace jafleet.Commons.EF
 
         [Column("SPECIAL_LIVERY")]
         public string SpecialLivery { get; set; }
+        public int SpecialLiveryChanged { get; set; } = 0;
 
 
         [NotMapped]
@@ -99,6 +100,7 @@ namespace jafleet.Commons.EF
             this.OperationChanged = this.OperationCode != compareTarget.OperationCode ? 1 : 0;
             this.WifiChanged = this.WifiCode != compareTarget.WifiCode ? 1 :0;
             this.RemarksChanged = this.Remarks != compareTarget.Remarks ? 1 : 0;
+            this.SpecialLiveryChanged = this.SpecialLivery != compareTarget.SpecialLivery ? 1 : 0;
         }
 
     }
