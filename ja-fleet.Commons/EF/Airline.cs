@@ -21,6 +21,8 @@ namespace jafleet.Commons.EF
         public string AirlineNameJpShort { get; set; }
         [Column("DISPLAY_ORDER")]
         public string DisplayOrder { get; set; }
+        [Column("DELETED")]
+        public bool Deleted { get; set; }
 
         [NotMapped]
         public string AirlineGroup { get; set; }
