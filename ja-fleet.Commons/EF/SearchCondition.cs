@@ -18,5 +18,7 @@ namespace jafleet.Commons.EF
         public DateTime? FirstSearchDate { get; set; }
         [Column("LAST_SEARCH_DATE")]
         public DateTime? LastSearchDate { get; set; }
+        [Column("SEARCH_CONDITION_NAME")]
+        public string SearchConditionName { get; set; }
     }
 }
