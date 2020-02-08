@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text;
 
 namespace jafleet.Commons.EF
 {
@@ -85,8 +86,81 @@ namespace jafleet.Commons.EF
         [NotMapped]
         public int SpecialLiveryChanged { get; set; } = 0;
 
-        [Column("SEAT_CONFIG")]
-        public string SeatConfig { get; set; }
+        [Column("F")]
+        public int? F { get; set; }
+
+        [Column("C")]
+        public int? C { get; set; }
+
+        [Column("PY")]
+        public int? PY { get; set; }
+
+        [Column("P")]
+        public int? P { get; set; }
+
+        [Column("J")]
+        public int? J { get; set; }
+
+        [Column("Y")]
+        public int? Y { get; set; }
+
+        [Column("SEAT_SUM")]
+        public int? SeatSum { get; set; }
+
+        [NotMapped]
+        public string SeatConfig
+        {
+            get
+            {
+                var seatConfig = new StringBuilder();
+                bool notFirst = false;
+                if (this.F.HasValue)
+                {
+                    seatConfig.Append("F");
+                    seatConfig.Append(this.F.Value);
+                    notFirst = true;
+                }
+                if (this.C.HasValue)
+                {
+                    seatConfig.Append(notFirst ? "," : string.Empty);
+                    seatConfig.Append("C");
+                    seatConfig.Append(this.C.Value);
+                    notFirst = true;
+                }
+                if (this.PY.HasValue)
+                {
+                    seatConfig.Append(notFirst ? "," : string.Empty);
+                    seatConfig.Append("PY");
+                    seatConfig.Append(this.PY.Value);
+                    notFirst = true;
+                }
+                if (this.P.HasValue)
+                {
+                    seatConfig.Append(notFirst ? "," : string.Empty);
+                    seatConfig.Append("P");
+                    seatConfig.Append(this.P.Value);
+                    notFirst = true;
+                }
+                if (this.J.HasValue)
+                {
+                    seatConfig.Append(notFirst ? "," : string.Empty);
+                    seatConfig.Append("J");
+                    seatConfig.Append(this.J.Value);
+                    notFirst = true;
+                }
+                if (this.Y.HasValue)
+                {
+                    seatConfig.Append(notFirst ? "," : string.Empty);
+                    seatConfig.Append("Y");
+                    seatConfig.Append(this.Y.Value);
+                    notFirst = true;
+                }
+
+                seatConfig.Append($" ({this.SeatSum.ToString()})");
+
+                return seatConfig.ToString();
+            }
+        }
         [NotMapped]
         public int SeatConfigChanged { get; set; } = 0;
 
