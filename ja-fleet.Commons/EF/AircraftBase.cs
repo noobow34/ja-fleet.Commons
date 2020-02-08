@@ -50,7 +50,7 @@ namespace jafleet.Commons.EF
 
         [Display(Name = "コンフィグ")]
         [Column("SEAT_CONFIG")]
-        public int SeatConfig { get; set; }
+        public int? SeatConfig { get; set; }
 
     }
 }
