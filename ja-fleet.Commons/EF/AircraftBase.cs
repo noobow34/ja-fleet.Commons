@@ -48,5 +48,9 @@ namespace jafleet.Commons.EF
         [Column("SPECIAL_LIVERY")]
         public string SpecialLivery { get; set; }
 
+        [Display(Name = "コンフィグ")]
+        [Column("SEAT_CONFIG")]
+        public int SeatConfig { get; set; }
+
     }
 }

@@ -85,6 +85,13 @@ namespace jafleet.Commons.EF
         [NotMapped]
         public int SpecialLiveryChanged { get; set; } = 0;
 
+        [Column("SEAT_CONFIG")]
+        public string SeatConfig { get; set; }
+        [NotMapped]
+        public int SeatConfigChanged { get; set; } = 0;
+
+        [Column("SEAT_URL")]
+        public string SeatUrl { get; set; }
 
         [NotMapped]
         public string UpdateTimeString
@@ -102,6 +109,7 @@ namespace jafleet.Commons.EF
             this.WifiChanged = this.WifiCode != compareTarget.WifiCode ? 1 :0;
             this.RemarksChanged = this.Remarks != compareTarget.Remarks ? 1 : 0;
             this.SpecialLiveryChanged = this.SpecialLivery != compareTarget.SpecialLivery ? 1 : 0;
+            this.SeatConfigChanged = this.SeatConfig != compareTarget.SeatConfig ? 1 : 0;
         }
 
     }
