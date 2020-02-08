@@ -3,8 +3,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace jafleet.Commons.EF
 {
-    [Table("SEAT_CONFIGRATION")]
-    public class SeatConfigration
+    [Table("SEAT_CONFIGURATION")]
+    public class SeatConfiguration
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -41,6 +41,24 @@ namespace jafleet.Commons.EF
         [Column("SEAT_SUM")]
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public int? SeatSum { get; }
-               
+
+        [NotMapped]
+        public string SeatConfig
+        {
+            get
+            {
+                return SeatConfigUtil.GenerateSeatConfigString(this.F, this.C, this.PY, this.P, this.J, this.Y, this.SeatSum);
+            }
+        }
+
+        [NotMapped]
+        public string SeatConfigLong
+        {
+            get
+            {
+                return SeatConfigUtil.GenerateSeatConfigString(this.F, this.C, this.PY, this.P, this.J, this.Y, this.SeatSum);
+            }
+        }
+
     }
 }
