@@ -112,53 +112,7 @@ namespace jafleet.Commons.EF
         {
             get
             {
-                var seatConfig = new StringBuilder();
-                bool notFirst = false;
-                if (this.F.HasValue)
-                {
-                    seatConfig.Append("F");
-                    seatConfig.Append(this.F.Value);
-                    notFirst = true;
-                }
-                if (this.C.HasValue)
-                {
-                    seatConfig.Append(notFirst ? "," : string.Empty);
-                    seatConfig.Append("C");
-                    seatConfig.Append(this.C.Value);
-                    notFirst = true;
-                }
-                if (this.PY.HasValue)
-                {
-                    seatConfig.Append(notFirst ? "," : string.Empty);
-                    seatConfig.Append("PY");
-                    seatConfig.Append(this.PY.Value);
-                    notFirst = true;
-                }
-                if (this.P.HasValue)
-                {
-                    seatConfig.Append(notFirst ? "," : string.Empty);
-                    seatConfig.Append("P");
-                    seatConfig.Append(this.P.Value);
-                    notFirst = true;
-                }
-                if (this.J.HasValue)
-                {
-                    seatConfig.Append(notFirst ? "," : string.Empty);
-                    seatConfig.Append("J");
-                    seatConfig.Append(this.J.Value);
-                    notFirst = true;
-                }
-                if (this.Y.HasValue)
-                {
-                    seatConfig.Append(notFirst ? "," : string.Empty);
-                    seatConfig.Append("Y");
-                    seatConfig.Append(this.Y.Value);
-                    notFirst = true;
-                }
-
-                seatConfig.Append($" ({this.SeatSum.ToString()})");
-
-                return seatConfig.ToString();
+                return SeatConfigUtil.GenerateSeatConfigString(this.F,this.C,this.PY,this.P,this.J,this.Y,this.SeatSum);
             }
         }
         [NotMapped]
