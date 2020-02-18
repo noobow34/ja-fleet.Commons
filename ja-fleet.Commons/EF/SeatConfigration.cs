@@ -40,7 +40,7 @@ namespace jafleet.Commons.EF
 
         [Column("SEAT_SUM")]
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        public int? SeatSum { get; }
+        public int? SeatSum { get; set; }
 
         [NotMapped]
         public string SeatConfig
@@ -56,7 +56,7 @@ namespace jafleet.Commons.EF
         {
             get
             {
-                return SeatConfigUtil.GenerateSeatConfigString(this.F, this.C, this.PY, this.P, this.J, this.Y, this.SeatSum);
+                return SeatConfigUtil.GenerateSeatConfigLongString(this.F, this.C, this.PY, this.P, this.J, this.Y, this.SeatSum,this.Airline,this.Type);
             }
         }
 
