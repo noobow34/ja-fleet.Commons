@@ -24,6 +24,7 @@ namespace jafleet.Commons.EF
         public virtual DbSet<AircraftHistoryView> AircraftHistoryView { get; set; }
         public virtual DbSet<AircraftPhoto> AircraftPhoto { get; set; }
         public virtual DbSet<SeatConfiguration> SeatConfigration { get; set; }
+        public virtual DbSet<WorkingStatus> WorkingStatus { get; set; }
 
         public jafleetContext(DbContextOptions<jafleetContext> options) : base(options) { }
 
