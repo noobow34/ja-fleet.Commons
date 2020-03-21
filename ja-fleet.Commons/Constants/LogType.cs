@@ -9,6 +9,7 @@
         public const string LINE_FOLLOW = "5";
         public const string LINE_UNFOLLOW = "6";
         public const string LINE_LINK = "7";
+        public const string WORKING_INFO = "8";
 
         public static string GetLogTypeName(string logtype)
         {
@@ -28,6 +29,8 @@
                     return "LINEアンフォロー";
                 case LINE_LINK:
                     return "LINEリンク";
+                case WORKING_INFO:
+                    return "稼働状況";
                 default:
                     return logtype;
             }
