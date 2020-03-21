@@ -14,11 +14,8 @@ namespace jafleet.Commons.EF
         [Column("PHOTO_URL")]
         public string PhotoUrl { get; set; }
 
-        [Column("PHOTO_DIRECT_URL_LARGE")]
-        public string PhotoDirectUrlLarge { get; set; }
-
-        [Column("PHOTO_DIRECT_URL_SMALL")]
-        public string PhotoDirectUrlSmall { get; set; }
+        [Column("PHOTO_DIRECT_URL")]
+        public string PhotoDirectUrl { get; set; }
 
         [Column("LAST_ACCESS")]
         public DateTime LastAccess { get; set; }
