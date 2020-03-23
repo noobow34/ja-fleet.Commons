@@ -9,5 +9,8 @@ namespace jafleet.Commons.EF
         [Column("REGISTRATION_NUMBER")]
         [Key]
         public new string RegistrationNumber { get; set; }
+
+        [Column("PHOTO_DIRECT_URL")]
+        public string PhotoDirectUrl { get; set; }
     }
 }
