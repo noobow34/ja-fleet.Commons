@@ -28,5 +28,8 @@ namespace jafleet.Commons.EF
 
         [Column("WORKING")]
         public bool? Working { get; set; }
+
+        [Column("MAINTENANCING")]
+        public bool? Maintenancing { get; set; }
     }
 }
