@@ -26,6 +26,7 @@ namespace jafleet.Commons.EF
         public virtual DbSet<SeatConfiguration> SeatConfigration { get; set; }
         public virtual DbSet<WorkingStatus> WorkingStatus { get; set; }
         public virtual DbSet<AccessLog> AccessLog { get; set; }
+        public virtual DbSet<AppInfo> AppInfo { get; set; }
 
         public jafleetContext(DbContextOptions<jafleetContext> options) : base(options) { }
 
