@@ -12,5 +12,7 @@ namespace jafleet.Commons.EF
         public string CommitHash { get; set; }
         [Column("COMMIT_DATE")]
         public DateTime CommitDate { get; set; }
+        [Column("DEPLOY_DATE")]
+        public DateTime DeployDate { get; set; }
     }
 }
