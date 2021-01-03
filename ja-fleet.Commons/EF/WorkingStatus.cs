@@ -31,5 +31,8 @@ namespace jafleet.Commons.EF
 
         [Column("MAINTENANCING")]
         public bool? Maintenancing { get; set; }
+
+        [Column("TEST_FLIGHT_DATE")]
+        public DateTime? TestFlightDate { get; set; }
     }
 }
