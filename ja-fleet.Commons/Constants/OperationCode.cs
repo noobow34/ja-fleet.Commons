@@ -53,6 +53,11 @@
         public const string OTHER = "9";
 
         /// <summary>
+        /// デリバリー前
+        /// </summary>
+        public static readonly string[] PRE_DELIVERY = new string[] { RESERVED, MAKING };
+
+        /// <summary>
         /// 運用前
         /// </summary>
         public static readonly string[] PRE_OPERATION = new string[] { RESERVED, MAKING, DELIVERY };

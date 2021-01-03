@@ -52,5 +52,13 @@ namespace jafleet.Commons.EF
         [Column("SEAT_CONFIG")]
         public int? SeatConfig { get; set; }
 
+        [Display(Name = "テストレジ")]
+        [Column("TEST_REGISTRATION")]
+        public string TestRegistration { get; set; }
+
+        [Display(Name = "整備通知")]
+        [Column("MAINTENANCE_NOTIFY")]
+        public bool? MaintenanceNotify { get; set; }
+
     }
 }

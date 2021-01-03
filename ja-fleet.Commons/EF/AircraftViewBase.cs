@@ -86,6 +86,12 @@ namespace jafleet.Commons.EF
         [NotMapped]
         public int SpecialLiveryChanged { get; set; } = 0;
 
+        [Column("TEST_REGISTRATION")]
+        public string TestRegistration { get; set; }
+
+        [Column("MAINTENANCE_NOTIFY")]
+        public bool? MaintenanceNotify { get; set; }
+
         [Column("F")]
         public int? F { get; set; }
 
