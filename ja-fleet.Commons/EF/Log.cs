@@ -4,26 +4,26 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace jafleet.Commons.EF
 {
-    [Table("LOG")]
+    [Table("log")]
     public class Log
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Column("LOG_ID")]
+        [Column("log_id")]
         public int? LogId { get; set; }
-        [Column("LOG_DATE")]
+        [Column("log_date")]
         public DateTime? LogDate { get; set; }
-        [Column("LOG_TYPE")]
+        [Column("log_type")]
         public string LogType { get; set; }
-        [Column("LOG_DETAIL")]
+        [Column("log_detail")]
         public string LogDetail { get; set; }
-        [Column("USER_ID")]
+        [Column("user_id")]
         public string UserId { get; set; }
-        [Column("LOG_DATE_YYYYMMDD")]
+        [Column("log_date_yyyymmdd")]
         public string LogDateYyyyMmDd { get; set; }
-        [Column("IS_ADMIN")]
+        [Column("is_admin")]
         public string IsAdmin { get; set; }
-        [Column("ADDITIONAL")]
+        [Column("additional")]
         public string Additional { get; set; }
     }
 }

@@ -4,20 +4,20 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace jafleet.Commons.EF
 {
-    [Table("AIRCRAFT_HISTORY")]
+    [Table("aircraft_history")]
     public partial class AircraftHistory:AircraftBase
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Column("AH_ID")]
+        [Column("ah_id")]
         public int? AhId { get; set; }
-        [Column("SEQ")]
+        [Column("seq")]
         public int? Seq { get; set; }
-        [Column("HISTORY_REGISTER_AT")]
+        [Column("history_register_at")]
         public DateTime? HistoryRegisterAt { get; set; }
 
         [Display(Name = "機体記号")]
-        [Column("REGISTRATION_NUMBER")]
+        [Column("registration_number")]
         public new string RegistrationNumber { get; set; }
     }
 }

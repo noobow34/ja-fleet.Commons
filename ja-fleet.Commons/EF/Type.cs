@@ -3,17 +3,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace jafleet.Commons.EF
 {
-    [Table("TYPE")]
+    [Table("type")]
     public class Type
     {
         [Key]
-        [Column("TYPE_CODE")]
+        [Column("type_code")]
         public string TypeCode { get; set; }
-        [Column("MAKER_CODE")]
+        [Column("maker_code")]
         public string MakerCode { get; set; }
-        [Column("TYPE_NAME")]
+        [Column("type_name")]
         public string TypeName { get; set; }
-        [Column("DISPLAY_ORDER")]
+        [Column("display_order")]
         public string DisplayOrder { get; set; }
     }
 }

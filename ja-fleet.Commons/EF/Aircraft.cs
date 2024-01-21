@@ -2,7 +2,7 @@
 
 namespace jafleet.Commons.EF
 {
-    [Table("AIRCRAFT")]
+    [Table("aircraft")]
     public partial class Aircraft:AircraftBase
     {
 

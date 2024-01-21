@@ -3,14 +3,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace jafleet.Commons.EF
 {
-    [Table("AIRCRAFT_VIEW")]
+    [Table("aircraft_view")]
     public partial class AircraftView:AircraftViewBase
     {
-        [Column("REGISTRATION_NUMBER")]
+        [Column("registration_number")]
         [Key]
         public new string RegistrationNumber { get; set; }
 
-        [Column("PHOTO_DIRECT_URL")]
+        [Column("photo_direct_url")]
         public string PhotoDirectUrl { get; set; }
     }
 }

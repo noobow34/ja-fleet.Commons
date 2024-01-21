@@ -4,35 +4,35 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace jafleet.Commons.EF
 {
-    [Table("WORKING_STATUS")]
+    [Table("working_status")]
     public class WorkingStatus
     {
         [Key]
-        [Column("REGISTRATION_NUMBER")]
+        [Column("registration_number")]
         public string RegistrationNumber { get; set; }
 
-        [Column("FLIGHT_DATE")]
+        [Column("flight_date")]
         public DateTime? FlightDate { get; set; }
 
-        [Column("FROM_AP")]
+        [Column("from_ap")]
         public string FromAp { get; set; }
         
-        [Column("TO_AP")]
+        [Column("to_ap")]
         public string ToAp { get; set; }
 
-        [Column("FLIGHT_NUMBER")]
+        [Column("flight_number")]
         public string FlightNumber { get; set; }
 
-        [Column("STATUS")]
+        [Column("status")]
         public string Status { get; set; }
 
-        [Column("WORKING")]
+        [Column("working")]
         public bool? Working { get; set; }
 
-        [Column("MAINTENANCING")]
+        [Column("maintenancing")]
         public bool? Maintenancing { get; set; }
 
-        [Column("TEST_FLIGHT_DATE")]
+        [Column("test_flight_date")]
         public DateTime? TestFlightDate { get; set; }
     }
 }

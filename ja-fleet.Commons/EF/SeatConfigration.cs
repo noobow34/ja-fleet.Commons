@@ -3,42 +3,42 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace jafleet.Commons.EF
 {
-    [Table("SEAT_CONFIGURATION")]
+    [Table("seat_configuration")]
     public class SeatConfiguration
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Column("CONFIG_ID")]
+        [Column("config_id")]
         public int? ConfigId { get; set; }
 
-        [Column("AIRLINE")]
+        [Column("airline")]
         public string Airline { get; set; }
 
-        [Column("TYPE")]
+        [Column("type")]
         public string Type { get; set; }
 
-        [Column("URL")]
+        [Column("url")]
         public string Url { get; set; }
 
-        [Column("F")]
+        [Column("f")]
         public int? F { get; set; }
 
-        [Column("C")]
+        [Column("c")]
         public int? C { get; set; }
 
-        [Column("PY")]
+        [Column("py")]
         public int? PY { get; set; }
 
-        [Column("P")]
+        [Column("p")]
         public int? P { get; set; }
 
-        [Column("J")]
+        [Column("j")]
         public int? J { get; set; }
 
-        [Column("Y")]
+        [Column("y")]
         public int? Y { get; set; }
 
-        [Column("SEAT_SUM")]
+        [Column("seat_sum")]
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public int? SeatSum { get; set; }
 

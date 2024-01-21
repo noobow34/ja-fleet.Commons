@@ -4,15 +4,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace jafleet.Commons.EF
 {
-    [Table("APP_INFO")]
+    [Table("app_info")]
     public class AppInfo
     {
         [Key]
-        [Column("COMMIT_HASH")]
+        [Column("commit_hash")]
         public string CommitHash { get; set; }
-        [Column("COMMIT_DATE")]
+        [Column("commit_date")]
         public DateTime CommitDate { get; set; }
-        [Column("DEPLOY_DATE")]
+        [Column("deploy_date")]
         public DateTime DeployDate { get; set; }
     }
 }

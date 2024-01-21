@@ -3,13 +3,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace jafleet.Commons.EF
 {
-    [Table("AIRLINE_GROUP")]
+    [Table("airline_group")]
     public class AirlineGroup
     {
         [Key]
-        [Column("AIRLINE_GROUP_CODE")]
+        [Column("airline_group_code")]
         public string AirlineGroupCode { get; set; }
-        [Column("AIRLINE_GROUP_NAME")]
+        [Column("airline_group_name")]
         public string AirlineGroupName { get; set; }
     }
 }

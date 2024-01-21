@@ -3,14 +3,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace jafleet.Commons.EF
 {
-    [Table("AIRCRAFT_HISTORY_VIEW")]
+    [Table("aircraft_history_view")]
     public partial class AircraftHistoryView : AircraftViewBase
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Column("AH_ID")]
+        [Column("ah_id")]
         public int? AhId { get; set; }
-        [Column("SEQ")]
+        [Column("seq")]
         public int? Seq { get; set; }
 
     }

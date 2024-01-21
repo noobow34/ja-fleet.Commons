@@ -4,21 +4,21 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace jafleet.Commons.EF
 {
-    [Table("SEARCH_CONDITION")]
+    [Table("search_condition")]
     public class SearchCondition
     {
         [Key]
-        [Column("SEARCH_CONDITION_KEY")]
+        [Column("search_condition_key")]
         public string SearchConditionKey { get; set; }
-        [Column("SEARCH_CONDITOIN")]
+        [Column("search_conditoin")]
         public string SearchConditionJson { get; set; }
-        [Column("SEARCH_COUNT")]
+        [Column("search_count")]
         public int? SearchCount { get; set; }
-        [Column("FIRST_SEARCH_DATE")]
+        [Column("first_search_date")]
         public DateTime? FirstSearchDate { get; set; }
-        [Column("LAST_SEARCH_DATE")]
+        [Column("last_search_date")]
         public DateTime? LastSearchDate { get; set; }
-        [Column("SEARCH_CONDITION_NAME")]
+        [Column("search_condition_name")]
         public string SearchConditionName { get; set; }
     }
 }
