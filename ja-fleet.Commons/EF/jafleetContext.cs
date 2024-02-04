@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace jafleet.Commons.EF
 {
@@ -27,7 +28,7 @@ namespace jafleet.Commons.EF
         public virtual DbSet<AccessLog> AccessLog { get; set; }
         public virtual DbSet<AppInfo> AppInfo { get; set; }
 
-        public jafleetContext(DbContextOptions<jafleetContext> options) : base(options) { }
+        public jafleetContext(DbContextOptions<jafleetContext> options) : base(options) => AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
     }
 }

@@ -3,25 +3,25 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace jafleet.Commons.EF
 {
-    [Table("AIRLINE")]
+    [Table("airline")]
     public class Airline
     {
         [Key]
-        [Column("AIRLINE_CODE")]
+        [Column("airline_code")]
         public string AirlineCode { get; set; }
-        [Column("AIRLINE_GROUP_CODE")]
+        [Column("airline_group_code")]
         public string AirlineGroupCode { get; set; }
-        [Column("AIRLINE_NAME_EN")]
+        [Column("airline_name_en")]
         public string AirlineNameEn { get; set; }
-        [Column("AIRLINE_NAME_EN_SHORT")]
+        [Column("airline_name_en_short")]
         public string AirlineNameJp { get; set; }
-        [Column("AIRLINE_NAME_JP")]
+        [Column("airline_name_jp")]
         public string AirlineNameEnShort { get; set; }
-        [Column("AIRLINE_NAME_JP_SHORT")]
+        [Column("airline_name_jp_short")]
         public string AirlineNameJpShort { get; set; }
-        [Column("DISPLAY_ORDER")]
+        [Column("display_order")]
         public string DisplayOrder { get; set; }
-        [Column("DELETED")]
+        [Column("deleted")]
         public bool Deleted { get; set; }
 
         [NotMapped]

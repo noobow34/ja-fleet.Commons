@@ -3,19 +3,19 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace jafleet.Commons.EF
 {
-    [Table("DAILY_STATISTICS")]
+    [Table("daily_statistics")]
     public class DailyStatistics
     {
         [Key]
-        [Column("LOG_DATE_YYYYMMDD")]
+        [Column("log_date_yyyymmdd")]
         public string LogDateYyyyMmDd { get; set; }
-        [Column("SEARCH_COUNT")]
+        [Column("search_count")]
         public int SearchCount { get; set; }
-        [Column("LINE_COUNT")]
+        [Column("line_count")]
         public int LineCount { get; set; }
-        [Column("PHOTO_COUNT")]
+        [Column("photo_count")]
         public int PhotoCount { get; set; }
-        [Column("EX_COUNT")]
+        [Column("ex_count")]
         public int ExCount { get; set; }
     }
 }

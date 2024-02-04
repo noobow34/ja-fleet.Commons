@@ -4,35 +4,35 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace jafleet.Commons.EF
 {
-    [Table("ACCESS_LOG")]
+    [Table("access_log")]
     public class AccessLog
     {
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Column("LOG_ID")]
+        [Column("log_id")]
         public long LogId { get; set; }
-        [Column("REQUEST_TIME")]
+        [Column("request_time")]
         public DateTime RequestTime { get; set; }
-        [Column("REQUEST_IP")]
+        [Column("request_ip")]
         public string RequestIp { get; set; }
-        [Column("REQUEST_HOSTNAME")]
+        [Column("request_hostname")]
         public string RequestHostname { get; set; }
-        [Column("REQUEST_PATH")]
+        [Column("request_path")]
         public string RequestPath { get; set; }
-        [Column("REQUEST_QUERY")]
+        [Column("request_query")]
         public string RequestQuery { get; set; }
-        [Column("REQUEST_COOKIES")]
+        [Column("request_cookies")]
         public string RequestCookies { get; set; }
-        [Column("USER_AGENT")]
+        [Column("user_agent")]
         public string UserAgent { get; set; }
-        [Column("REFERER")]
+        [Column("referer")]
         public string Referer { get; set; }
-        [Column("RESPONSE_TIME")]
+        [Column("response_time")]
         public long? ResponseTime { get; set; }
-        [Column("RESPONSE_CODE")]
+        [Column("response_code")]
         public int? ResponseCode { get; set; }
-        [Column("IS_ADMIN")]
+        [Column("is_admin")]
         public bool? IsAdmin { get; set; }
 
     }

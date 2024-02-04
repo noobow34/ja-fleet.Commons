@@ -3,15 +3,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace jafleet.Commons.EF
 {
-    [Table("MAKER")]
+    [Table("maker")]
     public class Maker
     {
         [Key]
-        [Column("MAKER_CODE")]
+        [Column("maker_code")]
         public string MakerCode { get; set; }
-        [Column("MAKER_NAME_EN")]
+        [Column("maker_name_en")]
         public string MakerNameEn { get; set; }
-        [Column("MAKER_NAME_JP")]
+        [Column("maker_name_jp")]
         public string MakerNameJp { get; set; }
     }
 }

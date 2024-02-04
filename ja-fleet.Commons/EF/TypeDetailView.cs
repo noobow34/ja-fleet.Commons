@@ -3,19 +3,19 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace jafleet.Commons.EF
 {
-    [Table("TYPE_DETAIL_VIEW")]
+    [Table("type_detail_view")]
     public class TypeDetailView
     {
         [Key]
-        [Column("TYPE_DETAIL_ID")]
+        [Column("type_detail_id")]
         public int TypeDetailId { get; set; }
-        [Column("TYPE_CODE")]
+        [Column("type_code")]
         public string TypeCode { get; set; }
-        [Column("TYPE_NAME")]
+        [Column("type_name")]
         public string TypeName { get; set; }
-        [Column("TYPE_DETAIL_NAME")]
+        [Column("type_detail_name")]
         public string TypeDetailName { get; set; }
-        [Column("DISPLAY_ORDER")]
+        [Column("display_order")]
         public string DisplayOrder { get; set; }
     }
 }

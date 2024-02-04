@@ -4,21 +4,21 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace jafleet.Commons.EF
 {
-    [Table("LINE_USER")]
+    [Table("line_user")]
     public class LineUser
     {
         [Key]
-        [Column("USER_ID")]
+        [Column("user_id")]
         public string UserId { get; set; }
-        [Column("USER_NAME")]
+        [Column("user_name")]
         public string UserName { get; set; }
-        [Column("LAST_ACCESS")]
+        [Column("last_access")]
         public DateTime? LastAccess { get; set; }
-        [Column("FOLLOW_DATE")]
+        [Column("follow_date")]
         public DateTime? FollowDate { get; set; }
-        [Column("UNFOLLOW_DATE")]
+        [Column("unfollow_date")]
         public DateTime? UnfollowDate { get; set; }
-        [Column("PROFILE_UPDATE_TIME")]
+        [Column("profile_update_time")]
         public DateTime? ProfileUpdateTime { get; set; }
     }
 }

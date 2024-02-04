@@ -3,11 +3,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace jafleet.Commons.EF
 {
-    [Table("ADMIN_USER")]
+    [Table("admin_user")]
     public class AdminUser
     {
         [Key]
-        [Column("USER_ID")]
+        [Column("user_id")]
         public string UserId { get; set; }
     }
 }

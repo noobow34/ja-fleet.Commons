@@ -6,110 +6,110 @@ namespace jafleet.Commons.EF
     public class AircraftViewBase
     {
 
-        [Column("DISPLAY_ORDER")]
+        [Column("display_order")]
         public string DisplayOrder { get; set; }
-        [Column("AIRLINE_GROUP_CODE")]
+        [Column("airline_group_code")]
         public string AirlineGroupCode { get; set; }
 
-        [Column("AIRLINE")]
+        [Column("airline")]
         public string Airline { get; set; }
         [NotMapped]
         public int AirlineChanged { get; set; } = 0;
 
-        [Column("AIRLINE_NAME_JP_SHORT")]
+        [Column("airline_name_jp_short")]
         public string AirlineNameJpShort { get; set; }
 
-        [Column("TYPE_CODE")]
+        [Column("type_code")]
         public string TypeCode { get; set; }
-        [Column("TYPE_NAME")]
+        [Column("type_name")]
         public string TypeName { get; set; }
 
-        [Column("TYPE_DETAIL_CODE")]
+        [Column("type_detail_code")]
         public string TypeDetailCode { get; set; }
         [NotMapped]
         public int TypeDetailChanged { get; set; } = 0;
 
-        [Column("TYPE_DETAIL_NAME")]
+        [Column("type_detail_name")]
         public string TypeDetailName { get; set; }
 
-        [Column("REGISTRATION_NUMBER")]
+        [Column("registration_number")]
         public string RegistrationNumber { get; set; }
 
-        [Column("SERIAL_NUMBER")]
+        [Column("serial_number")]
         public string SerialNumber { get; set; }
         [NotMapped]
         public int SerialNumberChanged { get; set; } = 0;
 
-        [Column("REGISTER_DATE")]
+        [Column("register_date")]
         public string RegisterDate { get; set; }
         [NotMapped]
         public int RegisterDateChanged { get; set; } = 0;
 
-        [Column("WIFI_CODE")]
+        [Column("wifi_code")]
         public string WifiCode { get; set; }
         [NotMapped]
         public int WifiChanged { get; set; } = 0;
 
-        [Column("WIFI")]
+        [Column("wifi")]
         public string Wifi { get; set; }
 
-        [Column("WIFI_SHORT")]
+        [Column("wifi_short")]
         public string WifiShort { get; set; }
 
-        [Column("OPERATION_CODE")]
+        [Column("operation_code")]
         public string OperationCode { get; set; }
         [NotMapped]
         public int OperationChanged { get; set; } = 0;
 
-        [Column("OPERATION")]
+        [Column("operation")]
         public string Operation { get; set; }
 
-        [Column("REMARKS")]
+        [Column("remarks")]
         public string Remarks { get; set; }
         [NotMapped]
         public int RemarksChanged { get; set; } = 0;
 
-        [Column("CREATION_TIME")]
+        [Column("creation_time")]
         public DateTime? CreationTime { get; set; }
-        [Column("UPDATE_TIME")]
+        [Column("update_time")]
         public DateTime? UpdateTime { get; set; }
-        [Column("LINK_URL")]
+        [Column("link_url")]
         public string LinkUrl { get; set; }
-        [Column("ACTUAL_UPDATE_TIME")]
+        [Column("actual_update_time")]
         public DateTime? ActualUpdateTime { get; set; }
-        [Column("TYPE_DETAIL_ID")]
+        [Column("type_detail_id")]
         public int TypeDetailId { get; set; }
 
-        [Column("SPECIAL_LIVERY")]
+        [Column("special_livery")]
         public string SpecialLivery { get; set; }
         [NotMapped]
         public int SpecialLiveryChanged { get; set; } = 0;
 
-        [Column("TEST_REGISTRATION")]
+        [Column("test_registration")]
         public string TestRegistration { get; set; }
 
-        [Column("MAINTENANCE_NOTIFY")]
+        [Column("maintenance_notify")]
         public bool? MaintenanceNotify { get; set; }
 
-        [Column("F")]
+        [Column("f")]
         public int? F { get; set; }
 
-        [Column("C")]
+        [Column("c")]
         public int? C { get; set; }
 
-        [Column("PY")]
+        [Column("py")]
         public int? PY { get; set; }
 
-        [Column("P")]
+        [Column("p")]
         public int? P { get; set; }
 
-        [Column("J")]
+        [Column("j")]
         public int? J { get; set; }
 
-        [Column("Y")]
+        [Column("y")]
         public int? Y { get; set; }
 
-        [Column("SEAT_SUM")]
+        [Column("seat_sum")]
         public int? SeatSum { get; set; }
 
         [NotMapped]
@@ -123,7 +123,7 @@ namespace jafleet.Commons.EF
         [NotMapped]
         public int SeatConfigChanged { get; set; } = 0;
 
-        [Column("SEAT_URL")]
+        [Column("seat_url")]
         public string SeatUrl { get; set; }
 
         [NotMapped]

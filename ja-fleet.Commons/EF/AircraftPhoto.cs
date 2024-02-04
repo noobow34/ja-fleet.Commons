@@ -4,20 +4,20 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace jafleet.Commons.EF
 {
-    [Table("AIRCRAFT_PHOTO")]
+    [Table("aircraft_photo")]
     public class AircraftPhoto
     {
         [Key]
-        [Column("REGISTRATION_NUMBER")]
+        [Column("registration_number")]
         public string RegistrationNumber { get; set; }
 
-        [Column("PHOTO_URL")]
+        [Column("photo_url")]
         public string PhotoUrl { get; set; }
 
-        [Column("PHOTO_DIRECT_URL")]
+        [Column("photo_direct_url")]
         public string PhotoDirectUrl { get; set; }
 
-        [Column("LAST_ACCESS")]
+        [Column("last_access")]
         public DateTime LastAccess { get; set; }
     }
 }
