@@ -20,6 +20,7 @@ namespace jafleet.Commons.EF
         [Column("user_id")]
         public string UserId { get; set; }
         [Column("log_date_yyyymmdd")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public string LogDateYyyyMmDd { get; set; }
         [Column("is_admin")]
         public string IsAdmin { get; set; }
