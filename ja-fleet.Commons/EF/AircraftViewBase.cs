@@ -109,15 +109,12 @@ namespace jafleet.Commons.EF
         [Column("y")]
         public int? Y { get; set; }
 
-        [Column("seat_sum")]
-        public int? SeatSum { get; set; }
-
         [NotMapped]
         public string SeatConfig
         {
             get
             {
-                return SeatConfigUtil.GenerateSeatConfigString(this.F,this.C,this.PY,this.P,this.J,this.Y,this.SeatSum);
+                return SeatConfigUtil.GenerateSeatConfigString(this.F,this.C,this.PY,this.P,this.J,this.Y);
             }
         }
         [NotMapped]
