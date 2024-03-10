@@ -4,8 +4,10 @@ namespace jafleet.Commons
 {
     public static class SeatConfigUtil
     {
-        public static string GenerateSeatConfigString(int? F,int? C,int? PY,int? P,int? J,int? Y,int? sum)
+        public static string GenerateSeatConfigString(int? F,int? C,int? PY,int? P,int? J,int? Y)
         {
+            int sum = (F ?? 0) + (C ?? 0) + (PY ?? 0) + (P ?? 0) + (J ?? 0) + (Y ?? 0);
+
             var seatConfig = new StringBuilder();
             int kindCount = 0;
             bool notFirst = false;
@@ -63,9 +65,9 @@ namespace jafleet.Commons
 
             return seatConfig.ToString();
         }
-        public static string GenerateSeatConfigLongString(int? F, int? C, int? PY, int? P, int? J, int? Y, int? sum, string airline, string type)
+        public static string GenerateSeatConfigLongString(int? F, int? C, int? PY, int? P, int? J, int? Y, string airline, string type)
         {
-            return GenerateSeatConfigString(F, C, PY, P, J, Y,sum) + $" ({airline}-{type})";
+            return GenerateSeatConfigString(F, C, PY, P, J, Y) + $" ({airline}-{type})";
         }
     }
 
