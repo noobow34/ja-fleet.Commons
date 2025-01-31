@@ -12,13 +12,13 @@ namespace jafleet.Commons.EF
         public int? ConfigId { get; set; }
 
         [Column("airline")]
-        public string Airline { get; set; }
+        public string? Airline { get; set; }
 
         [Column("type")]
-        public string Type { get; set; }
+        public string? Type { get; set; }
 
         [Column("url")]
-        public string Url { get; set; }
+        public string? Url { get; set; }
 
         [Column("f")]
         public int? F { get; set; }
@@ -52,7 +52,7 @@ namespace jafleet.Commons.EF
         {
             get
             {
-                return SeatConfigUtil.GenerateSeatConfigLongString(this.F, this.C, this.PY, this.P, this.J, this.Y, this.Airline, this.Type);
+                return SeatConfigUtil.GenerateSeatConfigLongString(this.F, this.C, this.PY, this.P, this.J, this.Y, this.Airline!, this.Type!);
             }
         }
 

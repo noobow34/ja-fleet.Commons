@@ -8,22 +8,22 @@ namespace jafleet.Commons.EF
     {
         [Key]
         [Column("registration_number")]
-        public string RegistrationNumber { get; set; }
+        public required string RegistrationNumber { get; set; }
 
         [Column("flight_date")]
         public DateTime? FlightDate { get; set; }
 
         [Column("from_ap")]
-        public string FromAp { get; set; }
+        public string? FromAp { get; set; }
 
         [Column("to_ap")]
-        public string ToAp { get; set; }
+        public string? ToAp { get; set; }
 
         [Column("flight_number")]
-        public string FlightNumber { get; set; }
+        public string? FlightNumber { get; set; }
 
         [Column("status")]
-        public string Status { get; set; }
+        public string? Status { get; set; }
 
         [Column("working")]
         public bool? Working { get; set; }

@@ -11,10 +11,10 @@ namespace jafleet.Commons.EF
         [Column("type_detail_id")]
         public int? TypeDetailId { get; set; }
         [Column("type_code")]
-        public string TypeCode { get; set; }
+        public string? TypeCode { get; set; }
         [Column("type_detail_code")]
-        public string TypeDetailCode { get; set; }
+        public string? TypeDetailCode { get; set; }
         [Column("type_detail_name")]
-        public string TypeDetailName { get; set; }
+        public string? TypeDetailName { get; set; }
     }
 }

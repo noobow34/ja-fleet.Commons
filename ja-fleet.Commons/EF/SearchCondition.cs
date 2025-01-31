@@ -8,9 +8,9 @@ namespace jafleet.Commons.EF
     {
         [Key]
         [Column("search_condition_key")]
-        public string SearchConditionKey { get; set; }
+        public required string SearchConditionKey { get; set; }
         [Column("search_conditoin")]
-        public string SearchConditionJson { get; set; }
+        public string? SearchConditionJson { get; set; }
         [Column("search_count")]
         public int? SearchCount { get; set; }
         [Column("first_search_date")]
@@ -18,6 +18,6 @@ namespace jafleet.Commons.EF
         [Column("last_search_date")]
         public DateTime? LastSearchDate { get; set; }
         [Column("search_condition_name")]
-        public string SearchConditionName { get; set; }
+        public string? SearchConditionName { get; set; }
     }
 }

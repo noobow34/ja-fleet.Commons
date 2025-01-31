@@ -13,12 +13,12 @@ namespace jafleet.Commons.EF
         [Column("log_date")]
         public DateTime? LogDate { get; set; }
         [Column("log_type")]
-        public string LogType { get; set; }
+        public string? LogType { get; set; }
         [Column("log_detail")]
-        public string LogDetail { get; set; }
+        public string? LogDetail { get; set; }
         [Column("user_id")]
-        public string UserId { get; set; }
+        public string? UserId { get; set; }
         [Column("additional")]
-        public string Additional { get; set; }
+        public string? Additional { get; set; }
     }
 }

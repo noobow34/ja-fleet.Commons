@@ -8,23 +8,23 @@ namespace jafleet.Commons.EF
     {
         [Key]
         [Column("airline_code")]
-        public string AirlineCode { get; set; }
+        public required string AirlineCode { get; set; }
         [Column("airline_group_code")]
-        public string AirlineGroupCode { get; set; }
+        public string? AirlineGroupCode { get; set; }
         [Column("airline_name_en")]
-        public string AirlineNameEn { get; set; }
+        public string? AirlineNameEn { get; set; }
         [Column("airline_name_en_short")]
-        public string AirlineNameJp { get; set; }
+        public string? AirlineNameJp { get; set; }
         [Column("airline_name_jp")]
-        public string AirlineNameEnShort { get; set; }
+        public string? AirlineNameEnShort { get; set; }
         [Column("airline_name_jp_short")]
-        public string AirlineNameJpShort { get; set; }
+        public string? AirlineNameJpShort { get; set; }
         [Column("display_order")]
-        public string DisplayOrder { get; set; }
+        public string? DisplayOrder { get; set; }
         [Column("deleted")]
         public bool Deleted { get; set; }
 
         [NotMapped]
-        public string AirlineGroup { get; set; }
+        public string? AirlineGroup { get; set; }
     }
 }

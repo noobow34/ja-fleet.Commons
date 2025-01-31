@@ -8,9 +8,9 @@ namespace jafleet.Commons.EF
     {
         [Key]
         [Column("user_id")]
-        public string UserId { get; set; }
+        public required string UserId { get; set; }
         [Column("user_name")]
-        public string UserName { get; set; }
+        public string? UserName { get; set; }
         [Column("last_access")]
         public DateTime? LastAccess { get; set; }
         [Column("follow_date")]

@@ -17,6 +17,6 @@ namespace jafleet.Commons.EF
 
         [Display(Name = "機体記号")]
         [Column("registration_number")]
-        public new string RegistrationNumber { get; set; }
+        public new required string RegistrationNumber { get; set; }
     }
 }

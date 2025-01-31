@@ -8,13 +8,13 @@ namespace jafleet.Commons.EF
     {
         [Key]
         [Column("registration_number")]
-        public string RegistrationNumber { get; set; }
+        public required string RegistrationNumber { get; set; }
 
         [Column("photo_url")]
-        public string PhotoUrl { get; set; }
+        public string? PhotoUrl { get; set; }
 
         [Column("photo_direct_url")]
-        public string PhotoDirectUrl { get; set; }
+        public string? PhotoDirectUrl { get; set; }
 
         [Column("last_access")]
         public DateTime LastAccess { get; set; }

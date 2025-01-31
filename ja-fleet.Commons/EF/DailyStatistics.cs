@@ -8,7 +8,7 @@ namespace jafleet.Commons.EF
     {
         [Key]
         [Column("log_date_yyyymmdd")]
-        public string LogDateYyyyMmDd { get; set; }
+        public required string LogDateYyyyMmDd { get; set; }
         [Column("search_count")]
         public int SearchCount { get; set; }
         [Column("line_count")]

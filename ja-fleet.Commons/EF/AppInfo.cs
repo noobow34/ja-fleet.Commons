@@ -8,7 +8,7 @@ namespace jafleet.Commons.EF
     {
         [Key]
         [Column("commit_hash")]
-        public string CommitHash { get; set; }
+        public required string CommitHash { get; set; }
         [Column("commit_date")]
         public DateTime CommitDate { get; set; }
         [Column("deploy_date")]

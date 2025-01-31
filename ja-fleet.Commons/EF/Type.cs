@@ -8,12 +8,12 @@ namespace jafleet.Commons.EF
     {
         [Key]
         [Column("type_code")]
-        public string TypeCode { get; set; }
+        public required string TypeCode { get; set; }
         [Column("maker_code")]
-        public string MakerCode { get; set; }
+        public string? MakerCode { get; set; }
         [Column("type_name")]
-        public string TypeName { get; set; }
+        public string? TypeName { get; set; }
         [Column("display_order")]
-        public string DisplayOrder { get; set; }
+        public string? DisplayOrder { get; set; }
     }
 }

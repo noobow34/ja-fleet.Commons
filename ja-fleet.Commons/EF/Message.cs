@@ -11,13 +11,13 @@ namespace jafleet.Commons.EF
         [Column("message_id")]
         public int? MessageId { get; set; }
         [Column("message_type")]
-        public string MessageType { get; set; }
+        public string? MessageType { get; set; }
         [Column("sender")]
-        public string Sender { get; set; }
+        public string? Sender { get; set; }
         [Column("replay_to")]
-        public string ReplayTo { get; set; }
+        public string? ReplayTo { get; set; }
         [Column("message")]
-        public string MessageDetail { get; set; }
+        public string? MessageDetail { get; set; }
         [Column("recieve_date")]
         public DateTime? RecieveDate { get; set; }
     }

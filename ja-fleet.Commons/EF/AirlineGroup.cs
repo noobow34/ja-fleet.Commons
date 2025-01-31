@@ -8,8 +8,8 @@ namespace jafleet.Commons.EF
     {
         [Key]
         [Column("airline_group_code")]
-        public string AirlineGroupCode { get; set; }
+        public required string AirlineGroupCode { get; set; }
         [Column("airline_group_name")]
-        public string AirlineGroupName { get; set; }
+        public string? AirlineGroupName { get; set; }
     }
 }

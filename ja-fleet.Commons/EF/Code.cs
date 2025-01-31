@@ -11,15 +11,15 @@ namespace jafleet.Commons.EF
         [Column("code_id")]
         public int? CodeId { get; set; }
         [Column("code_type")]
-        public string CodeType { get; set; }
+        public string? CodeType { get; set; }
         [Column("key")]
-        public string Key { get; set; }
+        public string? Key { get; set; }
         [Column("value")]
-        public string Value { get; set; }
+        public string? Value { get; set; }
         [Column("value_short")]
-        public string ValueShort { get; set; }
+        public string? ValueShort { get; set; }
 
         [NotMapped]
-        public string OptGroup { get; set; }
+        public string? OptGroup { get; set; }
     }
 }

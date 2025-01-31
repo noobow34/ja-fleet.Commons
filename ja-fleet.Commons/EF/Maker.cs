@@ -8,10 +8,10 @@ namespace jafleet.Commons.EF
     {
         [Key]
         [Column("maker_code")]
-        public string MakerCode { get; set; }
+        public required string MakerCode { get; set; }
         [Column("maker_name_en")]
-        public string MakerNameEn { get; set; }
+        public string? MakerNameEn { get; set; }
         [Column("maker_name_jp")]
-        public string MakerNameJp { get; set; }
+        public string? MakerNameJp { get; set; }
     }
 }
