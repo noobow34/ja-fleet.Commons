@@ -55,26 +55,26 @@
         /// <summary>
         /// デリバリー前
         /// </summary>
-        public static readonly string[] PRE_DELIVERY = new string[] { RESERVED, MAKING };
+        public static readonly string[] PRE_DELIVERY = [RESERVED, MAKING];
 
         /// <summary>
         /// 運用前
         /// </summary>
-        public static readonly string[] PRE_OPERATION = new string[] { RESERVED, MAKING, DELIVERY };
+        public static readonly string[] PRE_OPERATION = [RESERVED, MAKING, DELIVERY];
 
         /// <summary>
         /// 運用中
         /// </summary>
-        public static readonly string[] IN_OPERATION = new string[] { INTERNATIONAL, DOMESTIC, BOTH, CARGO };
+        public static readonly string[] IN_OPERATION = [INTERNATIONAL, DOMESTIC, BOTH, CARGO];
 
         /// <summary>
         /// 退役
         /// </summary>
-        public static readonly string[] RETIRE = new string[] { RETIRE_REGISTERED, RETIRE_UNREGISTERED };
+        public static readonly string[] RETIRE = [RETIRE_REGISTERED, RETIRE_UNREGISTERED];
 
         /// <summary>
         /// その他
         /// </summary>
-        public static readonly string[] OTHERS = new string[] { OTHER };
+        public static readonly string[] OTHERS = [OTHER];
     }
 }
