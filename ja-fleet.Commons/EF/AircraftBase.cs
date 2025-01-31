@@ -43,7 +43,7 @@ namespace jafleet.Commons.EF
         [Column("type_detail_id")]
         public int TypeDetailId { get; set; }
 
-        [Display(Name ="特別塗装")]
+        [Display(Name = "特別塗装")]
         [Column("special_livery")]
         public string SpecialLivery { get; set; }
 

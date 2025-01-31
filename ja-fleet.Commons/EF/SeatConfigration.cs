@@ -52,7 +52,7 @@ namespace jafleet.Commons.EF
         {
             get
             {
-                return SeatConfigUtil.GenerateSeatConfigLongString(this.F, this.C, this.PY, this.P, this.J, this.Y, this.Airline,this.Type);
+                return SeatConfigUtil.GenerateSeatConfigLongString(this.F, this.C, this.PY, this.P, this.J, this.Y, this.Airline, this.Type);
             }
         }
 

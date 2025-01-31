@@ -4,7 +4,7 @@ namespace jafleet.Commons
 {
     public static class SeatConfigUtil
     {
-        public static string GenerateSeatConfigString(int? F,int? C,int? PY,int? P,int? J,int? Y)
+        public static string GenerateSeatConfigString(int? F, int? C, int? PY, int? P, int? J, int? Y)
         {
             int sum = (F ?? 0) + (C ?? 0) + (PY ?? 0) + (P ?? 0) + (J ?? 0) + (Y ?? 0);
 
@@ -58,7 +58,7 @@ namespace jafleet.Commons
                 kindCount++;
             }
 
-            if(kindCount > 1)
+            if (kindCount > 1)
             {
                 seatConfig.Append($" ({sum.ToString()})");
             }

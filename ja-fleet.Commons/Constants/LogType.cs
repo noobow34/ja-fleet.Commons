@@ -1,7 +1,7 @@
 ﻿namespace jafleet.Commons.Constants
 {
     public static class LogType
-{
+    {
         public const string SEARCH = "1";
         public const string DETAIL = "2";
         public const string LINE = "3";
@@ -35,5 +35,5 @@
                     return logtype;
             }
         }
-}
+    }
 }

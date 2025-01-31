@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace jafleet.Commons.EF
 {
     [Table("aircraft_history")]
-    public partial class AircraftHistory:AircraftBase
+    public partial class AircraftHistory : AircraftBase
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

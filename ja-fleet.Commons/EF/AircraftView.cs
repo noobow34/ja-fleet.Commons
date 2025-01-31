@@ -5,7 +5,7 @@ namespace jafleet.Commons.EF
 {
     [Keyless]
     [Table("aircraft_view")]
-    public partial class AircraftView:AircraftViewBase
+    public partial class AircraftView : AircraftViewBase
     {
         [Column("photo_direct_url")]
         public string PhotoDirectUrl { get; set; }

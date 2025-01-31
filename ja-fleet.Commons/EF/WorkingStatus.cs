@@ -15,7 +15,7 @@ namespace jafleet.Commons.EF
 
         [Column("from_ap")]
         public string FromAp { get; set; }
-        
+
         [Column("to_ap")]
         public string ToAp { get; set; }
 

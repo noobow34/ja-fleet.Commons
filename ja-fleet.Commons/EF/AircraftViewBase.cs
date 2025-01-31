@@ -113,7 +113,7 @@ namespace jafleet.Commons.EF
         {
             get
             {
-                return SeatConfigUtil.GenerateSeatConfigString(this.F,this.C,this.PY,this.P,this.J,this.Y);
+                return SeatConfigUtil.GenerateSeatConfigString(this.F, this.C, this.PY, this.P, this.J, this.Y);
             }
         }
         [NotMapped]
@@ -131,11 +131,11 @@ namespace jafleet.Commons.EF
         public void getDifferenceWith(AircraftViewBase compareTarget)
         {
             this.AirlineChanged = this.Airline != compareTarget.Airline ? 1 : 0;
-            this.TypeDetailChanged = this.TypeDetailCode != compareTarget.TypeDetailCode? 1 : 0;
+            this.TypeDetailChanged = this.TypeDetailCode != compareTarget.TypeDetailCode ? 1 : 0;
             this.SerialNumberChanged = this.SerialNumber != compareTarget.SerialNumber ? 1 : 0;
             this.RegisterDateChanged = this.RegisterDate != compareTarget.RegisterDate ? 1 : 0;
             this.OperationChanged = this.OperationCode != compareTarget.OperationCode ? 1 : 0;
-            this.WifiChanged = this.WifiCode != compareTarget.WifiCode ? 1 :0;
+            this.WifiChanged = this.WifiCode != compareTarget.WifiCode ? 1 : 0;
             this.RemarksChanged = this.Remarks != compareTarget.Remarks ? 1 : 0;
             this.SpecialLiveryChanged = this.SpecialLivery != compareTarget.SpecialLivery ? 1 : 0;
             this.SeatConfigChanged = this.SeatConfig != compareTarget.SeatConfig ? 1 : 0;
