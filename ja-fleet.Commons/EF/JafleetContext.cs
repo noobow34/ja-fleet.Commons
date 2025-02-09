@@ -26,6 +26,7 @@ namespace jafleet.Commons.EF
         public virtual DbSet<WorkingStatus> WorkingStatuses { get; set; }
         public virtual DbSet<AccessLog> AccessLogs { get; set; }
         public virtual DbSet<AppInfo> AppInfos { get; set; }
+        public virtual DbSet<SchedulerDef> SchedulerDefs { get; set; }
 
         public JafleetContext(DbContextOptions<JafleetContext> options) : base(options) => AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
