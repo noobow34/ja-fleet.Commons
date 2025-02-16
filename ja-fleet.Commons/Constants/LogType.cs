@@ -10,31 +10,23 @@
         public const string LINE_UNFOLLOW = "6";
         public const string LINE_LINK = "7";
         public const string WORKING_INFO = "8";
-        public const string WORKIN_NOTIFY_TEXT = "9";
+        public const string WORKING_NOTIFY_TEXT = "9";
 
         public static string GetLogTypeName(string logtype)
         {
-            switch (logtype)
+            return logtype switch
             {
-                case SEARCH:
-                    return "検索";
-                case DETAIL:
-                    return "DETAIL";
-                case LINE:
-                    return "LINE";
-                case EXCEPTION:
-                    return "例外";
-                case LINE_FOLLOW:
-                    return "LINEフォロー";
-                case LINE_UNFOLLOW:
-                    return "LINEアンフォロー";
-                case LINE_LINK:
-                    return "LINEリンク";
-                case WORKING_INFO:
-                    return "稼働状況";
-                default:
-                    return logtype;
-            }
+                SEARCH => "検索",
+                DETAIL => "DETAIL",
+                LINE => "LINE",
+                EXCEPTION => "例外",
+                LINE_FOLLOW => "LINEフォロー",
+                LINE_UNFOLLOW => "LINEアンフォロー",
+                LINE_LINK => "LINEリンク",
+                WORKING_INFO => "稼働状況",
+                WORKING_NOTIFY_TEXT => "稼働状況通知用テキスト",
+                _ => logtype,
+            };
         }
     }
 }
