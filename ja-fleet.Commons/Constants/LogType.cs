@@ -10,6 +10,7 @@
         public const string LINE_UNFOLLOW = "6";
         public const string LINE_LINK = "7";
         public const string WORKING_INFO = "8";
+        public const string WORKIN_NOTIFY_TEXT = "9";
 
         public static string GetLogTypeName(string logtype)
         {
