@@ -16,7 +16,6 @@ namespace jafleet.Commons.EF
         public virtual DbSet<LineUser> LineUsers { get; set; }
         public virtual DbSet<SearchCondition> SearchConditions { get; set; }
         public virtual DbSet<DailyStatistics> DailyStatistics { get; set; }
-        public virtual DbSet<AdminUser> AdminUsers { get; set; }
         public virtual DbSet<TypeDetailView> TypeDetailViews { get; set; }
         public virtual DbSet<Message> Messagess { get; set; }
         public virtual DbSet<AircraftHistory> AircraftHistories { get; set; }
