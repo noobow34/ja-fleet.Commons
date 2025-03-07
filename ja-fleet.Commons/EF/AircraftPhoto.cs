@@ -18,5 +18,11 @@ namespace jafleet.Commons.EF
 
         [Column("last_access")]
         public DateTime LastAccess { get; set; }
+
+        [Column("photo_direct_large")]
+        public string? PhotoDirectLarge { get; set; }
+
+        [Column("photo_direct_small")]
+        public string? PhotoDirectSmall { get; set; }
     }
 }
