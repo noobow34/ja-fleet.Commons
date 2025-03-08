@@ -1,4 +1,5 @@
-﻿using AngleSharp.Html.Dom;
+﻿using AngleSharp.Dom;
+using AngleSharp.Html.Dom;
 using AngleSharp.XPath;
 using jafleet.Commons.Dto;
 using System.Text.RegularExpressions;
@@ -7,7 +8,7 @@ namespace jafleet.Commons.Aircraft
 {
     public static class AircraftDataExtractor
     {
-        public static AircraftPhotoResult ExtractPhotoDataFromJetphotos(IHtmlDocument? doc)
+        public static AircraftPhotoResult ExtractPhotoDataFromJetphotos(IDocument? doc)
         {
             string? jetphotos = RemoveQuery(((IHtmlAnchorElement?)doc?.Body?.SelectSingleNode("//*[@id=\"cnt-data-content\"]/div[1]/div[2]/div/div[1]/a"))?.Href);
             string? photoSmall = null;
