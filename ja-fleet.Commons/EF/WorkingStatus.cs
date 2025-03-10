@@ -33,5 +33,14 @@ namespace jafleet.Commons.EF
 
         [Column("test_flight_date")]
         public DateTime? TestFlightDate { get; set; }
+
+        [Column("exist_page")]
+        public bool? ExistPage { get; set; }
+
+        [Column("exist_operation")]
+        public bool? ExistOperation { get; set; }
+
+        [Column("exist_photo")]
+        public bool? ExistPhoto { get; set; }
     }
 }
