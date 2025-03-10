@@ -7,7 +7,5 @@ namespace jafleet.Commons.EF
     [Table("aircraft_view")]
     public partial class AircraftView : AircraftViewBase
     {
-        [Column("photo_direct_url")]
-        public string? PhotoDirectUrl { get; set; }
     }
 }
