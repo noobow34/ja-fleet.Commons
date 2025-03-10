@@ -42,5 +42,8 @@ namespace jafleet.Commons.EF
 
         [Column("exist_photo")]
         public bool? ExistPhoto { get; set; }
+
+        [Column("updated_at")]
+        public DateTime? UpdatedAt { get; set; }
     }
 }
